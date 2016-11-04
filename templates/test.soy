@@ -7,3 +7,12 @@
 {template .test}
 <div>{$test}</div>
 {/template}
+
+/**
+* Test template2
+*/
+{template .test2}
+    {call Templates.greetingsTemplates.hello }
+        {param name: 'World' /}
+    {/call}
+{/template}
