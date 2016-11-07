@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 module.exports = {
 	resolve: {
 		extensions: ['', '.js'],
@@ -8,6 +9,9 @@ module.exports = {
         ]
     },
     entry: './index.js',
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin()
+    ],
     output: {
         path: __dirname + '/dist',
         filename: 'bundle.js'
